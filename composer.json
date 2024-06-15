@@ -1,0 +1,29 @@
+{
+    "name": "reangaji/exam-oms-reang-01",
+    "type": "magento2-module",
+    "authors": [{
+            "name": "reangaji",
+            "email": "reang.aji@sirclo.com"
+        }
+    ],
+    "description": "Exam Module",
+    "homepage": "https://github.com/icube-mage/magento2-sinarmasapp/tree/develop",
+    "keywords": [
+        "magento",
+        "magento2"
+    ],
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "version": "1.0.0",
+    "minimum-stability": "dev",
+    "autoload": {
+        "files": [
+            "src/module-exam/registration.php"
+       ],
+        "psr-4": {
+            "Reang\\ExamBeReang\\": "src/module-exam"
+        }
+    }
+}
