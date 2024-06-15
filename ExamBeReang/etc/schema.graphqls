@@ -1,0 +1,35 @@
+type Query {
+    getProductReang(
+        search: String,
+        filter: ProductAttributeFilterInput,
+        sort: ProductAttributeSortInput,
+        pageSize: Int = 5,
+        currentPage: Int = 1
+    ): ProductReangResult @resolver(class: "Reang\\ExamBeReang\\Model\\Resolver\\GetProductReang")
+}
+
+type ProductReang {
+    entity_id: Int
+    sku: String
+    name: String
+    price: Float
+    status: Int
+    description: String
+    short_description: String
+    weight: Float
+    dimension_package_height: Float
+    dimension_package_length: Float
+    dimension_package_width: Float
+}
+
+type PageInfo {
+    current_page: Int
+    page_size: Int
+    total_pages: Int
+}
+
+type ProductReangResult {
+    items: [ProductReang]
+    page_info: PageInfo
+    total_count: Int
+}
